@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Combustível Kwid</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Gasolina ou Etanol?</h1>
+    <p class="subtitle">Descubra qual combustível vale mais a pena para o seu Kwid.</p>
+
+    <form id="fuel-form" class="card">
+      <label for="gasolina">Preço da gasolina (R$/L)</label>
+      <input id="gasolina" name="gasolina" type="number" min="0" step="0.01" placeholder="Ex.: 5,79" required>
+
+      <label for="etanol">Preço do etanol (R$/L)</label>
+      <input id="etanol" name="etanol" type="number" min="0" step="0.01" placeholder="Ex.: 3,89" required>
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <section id="resultado" class="result hidden" aria-live="polite"></section>
+
+    <p class="hint">Regra usada: o etanol compensa quando custa até 70% do preço da gasolina.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
